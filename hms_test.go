@@ -20,8 +20,6 @@ func TestHMS(t *testing.T) {
 		if ts != output[i] {
 			t.Errorf("'%v' != '%v'", ts, output[i])
 		}
-		
-		fmt.Println(ts)
 	}
 }
 
