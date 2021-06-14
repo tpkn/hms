@@ -13,7 +13,7 @@ type timestamp struct {
 	msec    float64
 }
 
-func (t timestamp) Stringify() string {
+func (t timestamp) stringify() string {
 	return fmt.Sprintf("%02v:%02v:%02v.%03v", t.hours, t.minutes, t.seconds, t.msec)
 }
 
@@ -25,5 +25,5 @@ func Seconds(duration float64) string {
 		math.Floor(math.Mod(duration * 1000, 1000)),
 	}
 	
-	return t.Stringify()
+	return t.stringify()
 }
