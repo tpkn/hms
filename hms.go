@@ -17,6 +17,7 @@ func (t timestamp) stringify() string {
 	return fmt.Sprintf("%02v:%02v:%02v.%03v", t.hours, t.minutes, t.seconds, t.msec)
 }
 
+// Seconds converts seconds to pretty 'HH:MM:SS.MSEC' style
 func Seconds(duration float64) string {
 	t := timestamp{
 		math.Floor(duration / 3600),
